@@ -1,0 +1,11 @@
+[
+   {
+      "name":"Source Name",
+      "simsearch_url":"http://...",
+      "simsearch_api":"API_KEY",
+      "api_required": false,
+      "es_url":"http://...",
+      "es_index":"source_index",
+      "es_field":"query_field"
+   }
+]
