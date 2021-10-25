@@ -1,0 +1,9 @@
+dash==1.18.0
+folium==0.11.0
+elasticsearch==7.10.0
+pandas==1.1.4
+wordcloud==1.8.1
+geopandas==0.8.1
+hdbscan==0.8.26
+filelock==3.0.12
+dash_bootstrap_components==0.11.1

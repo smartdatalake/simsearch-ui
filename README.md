@@ -51,6 +51,22 @@ After the retrieval of the results, the user can navigate into the 3 tabs: the l
 
 You can try a live demo [here](http://simsearch-demo.magellan.imsi.athenarc.gr/).
 
+## Creating and launching a Docker image 
+
+We provide an indicative `Dockerfile` that may be used to create a Docker image (`simsearch_ui`) from the executable:
+
+```sh
+$ docker build -t simsearch_ui .
+```
+
+This docker image can then be used to launch a web service application at a specific port (e.g., 8095) as follows:
+
+```sh
+$ docker run simsearch_ui -p 8095
+```
+
+Once the service is launched, the user can visit and use the SimSearch UI.
+
 ***
 
 ## License
