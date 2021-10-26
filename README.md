@@ -65,6 +65,12 @@ This docker image can then be used to launch a web service application at a spec
 $ docker run simsearch_ui -p 8095
 ```
 
+This is bound to use the settings files that are present in the settings folder during the time of the build. To dynamically modify the settings files, one has to mount a local directory instead when running the image:
+
+```sh
+$ docker run --volume <local_absolute_path>:/settings/  simsearch_ui -p 8095
+```
+
 Once the service is launched, the user can visit and use the SimSearch UI.
 
 ***
