@@ -479,7 +479,8 @@ def submit_query(submitted, decay_factor, rankMethod, apikey, state, sliders,
             ret[1] = 'Wrong API Key.'
             return ret    
     
-    params = {'algorithm':rankMethod, 'k':str(k), 'queries': query, 'decay_factor': decay_factor}
+    # params = {'algorithm':rankMethod, 'k':str(k), 'queries': query, 'decay_factor': decay_factor}
+    params = {'algorithm':rankMethod, 'k':str(k), 'queries': query, 'decay_factor': decay_factor, "output" : {"extra_columns" : ["name"]},}
     headers = {'api_key' : source['simsearch_api'], 'Content-Type' : 'application/json'}
     
     response = requests.post(source['simsearch_url']+'search/', json=params, headers=headers)

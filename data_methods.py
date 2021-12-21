@@ -59,7 +59,8 @@ def transform_field(x, attr_type):
     if attr_type == 'KEYWORD_SET':
         return x
     if attr_type == 'NUMBER':
-        return int(float(x))
+        val = int(float(x)) if x != '' else 0
+        return val
     if attr_type == 'GEOLOCATION' or attr_type == 'DATE_TIME':
         return x
     if attr_type == 'id':
@@ -81,7 +82,8 @@ def flatten(results, attr):
         
         d['id'] = transform_field(r['id'], "id")
         #d['name'] = name
-        d['name'] = r['name']
+        # d['name'] = r['name']
+        d['name'] = r['extraAttributes']['name']
         for key in ['score', 'rank', 'exact']:
             d[key] = r[key]
         for a in r['attributes']:
